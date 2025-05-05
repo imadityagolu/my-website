@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- TITLE -->
+    <title>Links</title>
+
+    <!-- PAGE ICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.ico">
+
+    <!-- TAILWIND linking -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- ICON linking -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- REACT integration -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+  </head>
+  <body className="">
+    
+    <!-- React Component -->
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+      const ReactAppFromCDN = () => {
+
+        return (
+            <div className="">
+                <p>Links</p>
+
+                <p>...of important helpful e-books, softwares and many more !</p>
+
+                <p>e-book</p>
+
+                <p><a href="https://t.me/imadityagolu_ebook"> • Collection of some free e-books</a></p>
+
+                <p>Mod Softwares</p>
+
+                <p><a href="https://t.me/imadityagolu_modsoftware"> • important useful windows softwares</a></p>
+
+                <p><a href="https://t.me/imadityagolu_modsoftware"> • important useful mac softwares</a></p>
+
+                <p>Mod Applications</p>
+
+                <p><a href="https://t.me/imadityagolu_modapk"> • ultimate android moded applications</a></p>
+
+                <p><a href="https://t.me/imadityagolu_modapk"> • ultimate apple moded applications</a></p>
+
+                <p>Free Courses</p>
+                
+                <p><a href="https://drive.google.com/drive/folders/12gwjgcUJAyrzufgiJ7xbMusXaqYevVia?usp=drive_link"> • Dhruve Rathi-YouTube BluePrint - Drive Videos</a></p>
+
+                <p><a href="https://mega.nz/folder/0PsS0QJY#01gFzFDr_2YrzsY18R61Rw"> • Dhruve Rathi-ChatGPT Master Course - Mega Download</a></p>
+
+            </div>
+        );
+      };
+
+      ReactDOM.render(<ReactAppFromCDN />, document.querySelector('#root'));
+    </script>
+
+  </body>
+</html>

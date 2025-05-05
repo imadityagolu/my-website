@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- TITLE -->
+    <title>Aditya Kumar</title>
+
+    <!-- PAGE ICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.ico">
+
+    <!-- TAILWIND linking -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- ICON linking -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- REACT integration -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+  </head>
+  <body class="">
+    
+    <!-- React Component -->
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const { useState } = React;
+
+      const ReactAppFromCDN = () => {
+        const [flag, setFlag] = useState(false);
+
+        const handleClick = () => {
+          setFlag(!flag);
+        };
+
+        return (
+          <div className="">
+
+            <nav className="w-full py-4 px-2 sticky bg-transparent backdrop-blur-md top-0 z-50 transition-all duration-300">
+              
+              <div className="flex justify-between items-center mx-2">
+                
+                <span className="md:block hidden cursor-pointer text-2xl font-semibold gradient-text shadow-text ml-3"> <a href="index.html">Aditya Kumar.</a> </span>
+
+                <span className="block md:hidden text-2xl cursor-pointer font-semibold gradient-text shadow-text ml-2"> <a href="index.html">Aditya Kumar.</a> </span>
+                
+                <ul className="hidden md:flex md:items-center gap-8">
+                  
+                  <li className="text-gray-600 hover:text-gray-900 active:text-gray-800 cursor-pointer transition-colors duration-300 ease-in-out">
+                    <a className="relative inline-block transition-all duration-300 after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="https://imadityagolu.vercel.app/">My Portfolio</a>
+                  </li>
+
+                  <li className="text-gray-600 hover:text-gray-900 active:text-gray-800 cursor-pointer transition-colors duration-300 ease-in-out">
+                    <a className="relative inline-block transition-all duration-300 after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="links.html">Links</a>
+                  </li>
+
+                  <li className="text-gray-600 hover:text-gray-900 active:text-gray-800 cursor-pointer transition-colors duration-300 ease-in-out">
+                    <a className="relative inline-block transition-all duration-300 after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="projects.html">Projects</a>
+                  </li>
+                  
+                  <li className="text-gray-600 hover:text-gray-900 active:text-gray-800 cursor-pointer transition-colors duration-300 ease-in-out">
+                    <a className="relative inline-block transition-all duration-300 after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="ad.html">Advertisement </a>
+                  </li>
+
+                </ul>
+
+                <a className="hidden cursor-pointer text-center md:block py-2 px-4 text-white bg-black rounded-lg text-[16px] transition-all duration-300 hover:bg-gray-800" href="HireMe.html">Hire Me</a>
+
+                <button className="text-2xl block md:hidden cursor-pointer transition-transform duration-300" onClick={handleClick}>
+                  {flag ? (
+                    <div className="transition-transform duration-300 rotate-90 text-black">X</div>
+                  ) : (
+                    <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"></path>
+                    </svg>
+                  )}
+                </button>
+
+              </div>
+            </nav>
+
+            <section className={`md:hidden fixed top-12 left-0 w-full bg-white shadow-md z-50 transition-all duration-500 ease-in-out transform ${
+              flag ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
+            }`}>
+              <div className="p-4 space-y-2">
+
+                <a className="block font-normal py-2 text-gray-900 hover:text-gray-600 text-center active:text-gray-800 transition-all duration-300 relative after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="https://imadityagolu.vercel.app/">My Portfolio</a>
+
+                <a className="block font-normal py-2 text-gray-900 hover:text-gray-600 text-center active:text-gray-800 transition-all duration-300 relative after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="links.html">Links</a>
+
+                <a className="block font-normal py-2 text-gray-900 hover:text-gray-600 text-center active:text-gray-800 transition-all duration-300 relative after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="projects.html">Projects</a>
+
+                <a className="block font-normal py-2 text-gray-900 hover:text-gray-600 text-center active:text-gray-800 transition-all duration-300 relative after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="ad.html">Advertisement </a>
+
+                <a className="block cursor-pointer py-2 mt-4 text-center text-white bg-black rounded-lg text-[14px] hover:bg-gray-800 transition-all duration-300" href="HireMe.html">Hire Me</a>
+
+              </div>
+            </section>
+
+            <hr></hr>
+
+            <div className="bg-gray-100 mb-5">
+            <main className="container mx-auto px-6 pb-15">
+              
+              <br></br>
+
+              <h2 className="text-sm font-semibold mb-4">With a passion for <b>painting</b> and creative <b>writing</b>, I try to brings stories and emotions to life through art. As a <b>computer engineer</b>, my blend of creativity and technical expertise enables me to tackle challenges with both artistic vision and engineering precision.</h2>
+
+              <br></br>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                            <img src="images/my-bg-1.jpg" alt="image" className="w-full h-48 object-cover" />
+                            <div className="p-4">
+                                <h3 className="text-xl font-semibold mb-2">Sociopathic</h3>
+                                <p className="text-gray-700 mb-2">not liking to be with other people</p>
+                                <p className="text-sm text-gray-600 mb-1"><strong>Targets:</strong> details</p>
+                            </div>
+                    </div>
+                        
+                    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                            <img src="images/my-bg-2.jpg" alt="image" className="w-full h-48 object-cover" />
+                            <div className="p-4">
+                                <h3 className="text-xl font-semibold mb-2">Cosmopolitan</h3>
+                                <p className="text-gray-700 mb-2">influenced by the culture of nature</p>
+                                <p className="text-sm text-gray-600 mb-1"><strong>Targets:</strong> details</p>
+                            </div>
+                    </div>
+                        
+                    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                            <img src="images/my-bg-3.jpg" alt="image" className="w-full h-48 object-cover" />
+                            <div className="p-4">
+                                <h3 className="text-xl font-semibold mb-2">Wanderlust</h3>
+                                <p className="text-gray-700 mb-2">strong desire to travel around world</p>
+                                <p className="text-sm text-gray-600 mb-1"><strong>Targets:</strong> details</p>
+                            </div>
+                    </div>
+                </div>
+            </main>
+
+            </div>
+
+            <div id="Contact" className="w-full text-center text-black">
+
+              <div className="relative">
+
+                <p className="text-3xl p-6 font-bold text-red-600">Contact me !</p>
+
+                <a href="mailto:adityasng420.ak@gmail.com" className="flex place-content-center p-2">
+                <i className="fa fa-envelope text-3xl mr-2"></i> 
+                <p className="text-blue-700">adityasng420.ak@gmail.com</p>
+                </a>
+    
+                <a href="https://api.whatsapp.com/send?phone=918083079692" className="flex place-content-center p-2">
+                <i className="fa fa-phone text-3xl" /> 
+                <p className="text-blue-700">+91 80830-79692</p>
+                </a>
+              </div>
+
+<br></br>
+
+              <div>
+                <p className="text-center place-content-center relative top-5 text-xl">connect with me on social media...</p>
+              </div>
+
+              <div className="flex place-content-center text-3xl gap-5 relative top-10">
+
+                <a href="https://www.instagram.com/imadityagolu/"><i className="fab fa-instagram text-pink-700"></i></a> 
+
+                <a href="https://www.facebook.com/imadityagolu/"><i className="fab fa-facebook text-blue-500"></i></a> 
+
+                <a href="https://github.com/imadityagolu"><i className="fab fa-github"></i></a> 
+
+                <a href="https://www.linkedin.com/in/imadityagolu/"><i className="fab fa-linkedin text-blue-700"></i></a> 
+
+                <a href="https://vercel.com/aditya-kumars-projects-a1b7703f"><i class="fas fa-play fa-rotate-270"></i></a> 
+
+                <a href="https://x.com/imAdityaGolu"><i className="fab fa-twitter text-blue-500"></i></a>
+
+                <a href="https://www.youtube.com/@imAdityaGolu"><i className="fab fa-youtube text-red-600"></i></a> 
+
+                <a href="https://api.whatsapp.com/send?phone=918083079692"><i className="fab fa-whatsapp text-green-500"></i></a>
+
+                <a href="https://web.telegram.org/k/#@ImAdityaGolu"><i className="fab fa-telegram text-blue-800"></i></a>
+
+              </div>
+
+              <div className="flex text-center place-content-center relative top-20 text-sm">    
+                Made by @imadityagolu © 2025
+<br></br>
+<br></br>
+              </div>
+            </div>
+          </div>
+        );
+      };
+
+      ReactDOM.render(<ReactAppFromCDN />, document.querySelector('#root'));
+    </script>
+
+  </body>
+</html>
