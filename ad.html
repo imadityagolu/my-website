@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- TITLE -->
-    <title>Advertisement</title>
+    <title>Aditya Kumar | Advertisement</title>
 
     <!-- PAGE ICON -->
     <link rel="shortcut icon" type="image/x-icon" href="images/logo.ico">
@@ -16,25 +16,122 @@
     <!-- ICON linking -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <!-- REACT integration -->
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
-    
   </head>
-  <body className="">
+  <body class="">
     
     <!-- React Component -->
     <div id="root"></div>
 
     <script type="text/babel">
+      const { useState } = React;
 
       const ReactAppFromCDN = () => {
+        const [flag, setFlag] = useState(false);
+
+        const handleClick = () => {
+          setFlag(!flag);
+        };
 
         return (
-            <div className="">
-                <p>Advertisement</p>
-            </div>
+          <div className="">
+
+            <nav className="w-full py-4 px-2 sticky bg-transparent backdrop-blur-md top-0 z-50 transition-all duration-300">
+              
+              <div className="flex justify-between items-center mx-2">
+                
+                <span className="md:block hidden cursor-pointer text-2xl font-semibold gradient-text shadow-text ml-3"> <a href="index.html">Aditya Kumar.</a> </span>
+
+                <span className="block md:hidden text-2xl cursor-pointer font-semibold gradient-text shadow-text ml-2"> <a href="index.html">Aditya Kumar.</a> </span>
+                
+                <ul className="hidden md:flex md:items-center gap-8">
+                  
+                  <li className="text-gray-600 hover:text-gray-900 active:text-gray-800 cursor-pointer transition-colors duration-300 ease-in-out">
+                    <a className="relative inline-block transition-all duration-300 after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="https://imadityagolu.vercel.app/">My Portfolio</a>
+                  </li>
+
+                  <li className="text-gray-600 hover:text-gray-900 active:text-gray-800 cursor-pointer transition-colors duration-300 ease-in-out">
+                    <a className="relative inline-block transition-all duration-300 after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="links.html">Links</a>
+                  </li>
+
+                  <li className="text-gray-600 hover:text-gray-900 active:text-gray-800 cursor-pointer transition-colors duration-300 ease-in-out">
+                    <a className="relative inline-block transition-all duration-300 after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="projects.html">Projects</a>
+                  </li>
+                  
+                  <li className="text-gray-600 hover:text-gray-900 active:text-gray-800 cursor-pointer transition-colors duration-300 ease-in-out">
+                    <a className="relative inline-block transition-all duration-300 after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="ad.html">Advertisement </a>
+                  </li>
+
+                </ul>
+
+                <a className="hidden cursor-pointer text-center md:block py-2 px-4 text-white bg-black rounded-lg text-[16px] transition-all duration-300 hover:bg-gray-800" href="HireMe.html">Hire Me</a>
+
+                <button className="text-2xl block md:hidden cursor-pointer transition-transform duration-300" onClick={handleClick}>
+                  {flag ? (
+                    <div className="transition-transform duration-300 rotate-90 text-black">X</div>
+                  ) : (
+                    <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"></path>
+                    </svg>
+                  )}
+                </button>
+
+              </div>
+            </nav>
+
+            <section className={`md:hidden fixed top-12 left-0 w-full bg-white shadow-md z-50 transition-all duration-500 ease-in-out transform ${
+              flag ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
+            }`}>
+              <div className="p-4 space-y-2">
+
+                <a className="block font-normal py-2 text-gray-900 hover:text-gray-600 text-center active:text-gray-800 transition-all duration-300 relative after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="https://imadityagolu.vercel.app/">My Portfolio</a>
+
+                <a className="block font-normal py-2 text-gray-900 hover:text-gray-600 text-center active:text-gray-800 transition-all duration-300 relative after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="links.html">Links</a>
+
+                <a className="block font-normal py-2 text-gray-900 hover:text-gray-600 text-center active:text-gray-800 transition-all duration-300 relative after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="projects.html">Projects</a>
+
+                <a className="block font-normal py-2 text-gray-900 hover:text-gray-600 text-center active:text-gray-800 transition-all duration-300 relative after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="ad.html">Advertisement </a>
+
+                <a className="block cursor-pointer py-2 mt-4 text-center text-white bg-black rounded-lg text-[14px] hover:bg-gray-800 transition-all duration-300" href="HireMe.html">Hire Me</a>
+
+              </div>
+            </section>
+
+            <hr></hr>
+ 
+<div className="container mx-auto p-5 md:p-5">
+
+    <h1 className="text-3xl md:text-3xl font-extrabold text-red-500 mb-1 text-center">
+		Advertisement
+    </h1>
+
+    <div className="bg-white p-5 rounded-lg shadow-2xl flex w-full">
+
+        <div className="w-full flex flex-col items-start">
+          
+          <div className="w-[60%]">
+            <img src="https://smartblogger.com/wp-content/uploads/2222/12/banner-ads-700.png" alt="Advertisement Poster" className="w-full max-w-md h-auto rounded-lg mb-4" />
+          </div>
+
+            <h1 className="text-2xl font-bold text-gray-800 mb-4">Discover Amazing Deals!</h1>
+
+            <p className="text-gray-600 mb-4">
+                Unlock exclusive offers and save big on your favorite products. Shop now and experience unbeatable prices!
+            </p>
+
+            <a href="https://example.com/referral" className="text-blue-500 hover:underline">Join Now with Our Referral Link!</a>
+
+        </div>
+    
+    </div>
+    
+</div>
+          </div>
         );
       };
 

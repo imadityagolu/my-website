@@ -5,65 +5,220 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- TITLE -->
-    <title>Links</title>
+    <title>Aditya Kumar | Links</title>
 
     <!-- PAGE ICON -->
     <link rel="shortcut icon" type="image/x-icon" href="images/logo.ico">
 
-    <!-- TAILWIND linking -->
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- TAILWIND CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- ICON linking -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- REACT integration -->
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <script crossorigin src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.development.js"></script>
+    <script crossorigin src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.20.15/babel.min.js"></script>
   </head>
-  <body className="">
+  <body class="">
     
     <!-- React Component -->
     <div id="root"></div>
 
     <script type="text/babel">
+      const { useState } = React;
 
       const ReactAppFromCDN = () => {
+        const [flag, setFlag] = useState(false);
+        const [dropdownStates, setDropdownStates] = useState({
+          ebook: false,
+          modSoftwares: false,
+          modApplications: false,
+          freeCourses: false,
+        });
+
+        const handleClick = () => {
+          setFlag(!flag);
+        };
+
+        const toggleDropdown = (dropdown) => {
+          setDropdownStates((prev) => ({
+            ...prev,
+            [dropdown]: !prev[dropdown],
+          }));
+        };
 
         return (
-            <div className="">
-                <p>Links</p>
+          <div>
 
-                <p>...of important helpful e-books, softwares and many more !</p>
+            <nav className="w-full py-4 px-2 sticky bg-transparent backdrop-blur-md top-0 z-50 transition-all duration-300">
+              <div className="flex justify-between items-center mx-2">
+                <span className="md:block hidden cursor-pointer text-2xl font-semibold gradient-text shadow-text ml-3">
+                  <a href="index.html">Aditya Kumar.</a>
+                </span>
+                <span className="block md:hidden text-2xl cursor-pointer font-semibold gradient-text shadow-text ml-2">
+                  <a href="index.html">Aditya Kumar.</a>
+                </span>
+                <ul className="hidden md:flex md:items-center gap-8">
+                  <li className="text-gray-600 hover:text-gray-900 active:text-gray-800 cursor-pointer transition-colors duration-300 ease-in-out">
+                    <a className="relative inline-block transition-all duration-300 after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="https://imadityagolu.vercel.app/">My Portfolio</a>
+                  </li>
+                  <li className="text-gray-600 hover:text-gray-900 active:text-gray-800 cursor-pointer transition-colors duration-300 ease-in-out">
+                    <a className="relative inline-block transition-all duration-300 after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="links.html">Links</a>
+                  </li>
+                  <li className="text-gray-600 hover:text-gray-900 active:text-gray-800 cursor-pointer transition-colors duration-300 ease-in-out">
+                    <a className="relative inline-block transition-all duration-300 after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="projects.html">Projects</a>
+                  </li>
+                  <li className="text-gray-600 hover:text-gray-900 active:text-gray-800 cursor-pointer transition-colors duration-300 ease-in-out">
+                    <a className="relative inline-block transition-all duration-300 after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="ad.html">Advertisement</a>
+                  </li>
+                </ul>
+                <a className="hidden cursor-pointer text-center md:block py-2 px-4 text-white bg-black rounded-lg text-[16px] transition-all duration-300 hover:bg-gray-800" href="HireMe.html">Hire Me</a>
+                <button className="text-2xl block md:hidden cursor-pointer transition-transform duration-300" onClick={handleClick}>
+                  {flag ? (
+                    <div className="transition-transform duration-300 rotate-90 text-black">X</div>
+                  ) : (
+                    <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-3.6 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"></path>
+                    </svg>
+                  )}
+                </button>
+              </div>
+            </nav>
+            
+            <section className={`md:hidden fixed top-12 left-0 w-full bg-white shadow-md z-50 transition-all duration-500 ease-in-out transform ${
+              flag ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
+            }`}>
+              <div className="p-4 space-y-2">
+                <a className="block font-normal py-2 text-gray-900 hover:text-gray-600 text-center active:text-gray-800 transition-all duration-300 relative after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="https://imadityagolu.vercel.app/">My Portfolio</a>
 
-                <p>e-book</p>
+                <a className="block font-normal py-2 text-gray-900 hover:text-gray-600 text-center active:text-gray-800 transition-all duration-300 relative after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="links.html">Links</a>
 
-                <p><a href="https://t.me/imadityagolu_ebook"> • Collection of some free e-books</a></p>
+                <a className="block font-normal py-2 text-gray-900 hover:text-gray-600 text-center active:text-gray-800 transition-all duration-300 relative after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="projects.html">Projects</a>
+                <a className="block font-normal py-2 text-gray-900 hover:text-gray-600 text-center active:text-gray-800 transition-all duration-300 relative after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="ad.html">Advertisement</a>
+                <a className="block cursor-pointer py-2 mt-4 text-center text-white bg-black rounded-lg text-[14px] hover:bg-gray-800 transition-all duration-300" href="HireMe.html">Hire Me</a>
+              </div>
+            </section>
+            
+            <hr />
 
-                <p>Mod Softwares</p>
+            <div className="container mx-auto p-5 md:p-5">
 
-                <p><a href="https://t.me/imadityagolu_modsoftware"> • important useful windows softwares</a></p>
+              <h1 className="text-3xl md:text-3xl font-extrabold text-red-500 mb-1 text-center">
+                Links
+              </h1>
 
-                <p><a href="https://t.me/imadityagolu_modsoftware"> • important useful mac softwares</a></p>
+              <div className="relative mt-4">
+                <button
+                  onClick={() => toggleDropdown('ebook')}
+                  className="flex items-center text-gray-800 font-semibold text-lg bg-gray-200 px-4 py-2 rounded-lg w-full mx-auto hover:bg-gray-300 transition-all duration-300"
+                >
+                  <i className="fa fa-book mr-2"></i>
+                  e-book
+                  <i className={`fa fa-chevron-down ml-auto transition-transform duration-300 ${dropdownStates.ebook ? 'rotate-180' : ''}`}></i>
+                </button>
+                <div className={`relative mt-2 w-full mx-auto bg-white shadow-lg overflow-hidden transition-all duration-300 ${
+                  dropdownStates.ebook ? 'opacity-100 max-h-40' : 'opacity-0 max-h-0'
+                }`}>
+                  <a
+                    href="https://t.me/imadityagolu_ebook"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-all duration-300"
+                  >
+                    • Collection of some free e-books
+                  </a>
+                </div>
+              </div>
 
-                <p>Mod Applications</p>
+              <div className="relative mt-4">
+                <button
+                  onClick={() => toggleDropdown('modSoftwares')}
+                  className="flex items-center text-gray-800 font-semibold text-lg bg-gray-200 px-4 py-2 rounded-lg w-full mx-auto hover:bg-gray-300 transition-all duration-300"
+                >
+                  <i className="fa fa-book mr-2"></i>
+                  Mod Softwares
+                  <i className={`fa fa-chevron-down ml-auto transition-transform duration-300 ${dropdownStates.modSoftwares ? 'rotate-180' : ''}`}></i>
+                </button>
+                <div className={`relative mt-2 w-full mx-auto bg-white shadow-lg overflow-hidden transition-all duration-300 ${
+                  dropdownStates.modSoftwares ? 'opacity-100 max-h-40' : 'opacity-0 max-h-0'
+                }`}>
+                  <a
+                    href="https://t.me/imadityagolu_modsoftware"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-all duration-300"
+                  >
+                    • Important useful Windows softwares
+                  </a>
+                  <a
+                    href="https://t.me/imadityagolu_modsoftware"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-all duration-300"
+                  >
+                    • Important useful Mac softwares
+                  </a>
+                </div>
+              </div>
 
-                <p><a href="https://t.me/imadityagolu_modapk"> • ultimate android moded applications</a></p>
+              <div className="relative mt-4">
+                <button
+                  onClick={() => toggleDropdown('modApplications')}
+                  className="flex items-center text-gray-800 font-semibold text-lg bg-gray-200 px-4 py-2 rounded-lg w-full mx-auto hover:bg-gray-300 transition-all duration-300"
+                >
+                  <i className="fa fa-book mr-2"></i>
+                  Mod Applications
+                  <i className={`fa fa-chevron-down ml-auto transition-transform duration-300 ${dropdownStates.modApplications ? 'rotate-180' : ''}`}></i>
+                </button>
+                <div className={`relative mt-2 w-full mx-auto bg-white shadow-lg overflow-hidden transition-all duration-300 ${
+                  dropdownStates.modApplications ? 'opacity-100 max-h-40' : 'opacity-0 max-h-0'
+                }`}>
+                  <a
+                    href="https://t.me/imadityagolu_modapk"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-all duration-300"
+                  >
+                    • Ultimate Android modded applications
+                  </a>
+                  <a
+                    href="https://t.me/imadityagolu_modapk"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-all duration-300"
+                  >
+                    • Ultimate Apple modded applications
+                  </a>
+                </div>
+              </div>
 
-                <p><a href="https://t.me/imadityagolu_modapk"> • ultimate apple moded applications</a></p>
-
-                <p>Free Courses</p>
-                
-                <p><a href="https://drive.google.com/drive/folders/12gwjgcUJAyrzufgiJ7xbMusXaqYevVia?usp=drive_link"> • Dhruve Rathi-YouTube BluePrint - Drive Videos</a></p>
-
-                <p><a href="https://mega.nz/folder/0PsS0QJY#01gFzFDr_2YrzsY18R61Rw"> • Dhruve Rathi-ChatGPT Master Course - Mega Download</a></p>
+              <div className="relative mt-4">
+                <button
+                  onClick={() => toggleDropdown('freeCourses')}
+                  className="flex items-center text-gray-800 font-semibold text-lg bg-gray-200 px-4 py-2 rounded-lg w-full mx-auto hover:bg-gray-300 transition-all duration-300"
+                >
+                  <i className="fa fa-book mr-2"></i>
+                  Free Courses
+                  <i className={`fa fa-chevron-down ml-auto transition-transform duration-300 ${dropdownStates.freeCourses ? 'rotate-180' : ''}`}></i>
+                </button>
+                <div className={`relative mt-2 w-full mx-auto bg-white shadow-lg overflow-hidden transition-all duration-300 ${
+                  dropdownStates.freeCourses ? 'opacity-100 max-h-40' : 'opacity-0 max-h-0'
+                }`}>
+                  <a
+                    href="https://drive.google.com/drive/folders/12gwjgcUJAyrzufgiJ7xbMusXaqYevVia?usp=drive_link"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-all duration-300"
+                  >
+                    • Dhruv Rathee - YouTube BluePrint - Drive Videos
+                  </a>
+                  <a
+                    href="https://mega.nz/folder/0PsS0QJY#01gFzFDr_2YrzsY18R61Rw"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-all duration-300"
+                  >
+                    • Dhruv Rathee - ChatGPT Master Course - Mega Download
+                  </a>
+                </div>
+              </div>
 
             </div>
+          
+          </div>
         );
       };
 
       ReactDOM.render(<ReactAppFromCDN />, document.querySelector('#root'));
     </script>
-
   </body>
 </html>
