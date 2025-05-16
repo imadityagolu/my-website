@@ -41,37 +41,38 @@
         return (
           <div className="">
 
-            <nav className="w-full py-4 px-2 sticky bg-transparent backdrop-blur-md top-0 z-50 transition-all duration-300">
+            {/* Header */}
+            <nav className="w-full py-6 px-3 sticky bg-transparent backdrop-blur-md top-0 z-50 transition-all duration-300">
               
               <div className="flex justify-between items-center mx-2">
                 
-                <span className="md:block hidden cursor-pointer text-2xl font-semibold gradient-text shadow-text ml-3"> <a href="index.html">Aditya Kumar.</a> </span>
+                <span className="md:block hidden cursor-pointer text-3xl font-semibold gradient-text shadow-text ml-3"> <a href="index.html">Aditya Kumar.</a> </span>
 
-                <span className="block md:hidden text-2xl cursor-pointer font-semibold gradient-text shadow-text ml-2"> <a href="index.html">Aditya Kumar.</a> </span>
+                <span className="block md:hidden text-3xl cursor-pointer font-semibold gradient-text shadow-text ml-2"> <a href="index.html">Aditya Kumar.</a> </span>
                 
                 <ul className="hidden md:flex md:items-center gap-8">
                   
-                  <li className="text-gray-600 hover:text-gray-900 active:text-gray-800 cursor-pointer transition-colors duration-300 ease-in-out">
+                  <li className="text-xl text-gray-600 hover:text-gray-900 active:text-gray-800 cursor-pointer transition-colors duration-300 ease-in-out">
                     <a className="relative inline-block transition-all duration-300 after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="https://imadityagolu-portfolio.vercel.app/">Portfolio</a>
                   </li>
 
-                  <li className="text-gray-600 hover:text-gray-900 active:text-gray-800 cursor-pointer transition-colors duration-300 ease-in-out">
+                  <li className="text-xl text-gray-600 hover:text-gray-900 active:text-gray-800 cursor-pointer transition-colors duration-300 ease-in-out">
                     <a className="relative inline-block transition-all duration-300 after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="links.html">Links</a>
                   </li>
 
-                  <li className="text-gray-600 hover:text-gray-900 active:text-gray-800 cursor-pointer transition-colors duration-300 ease-in-out">
+                  <li className="text-xl text-gray-600 hover:text-gray-900 active:text-gray-800 cursor-pointer transition-colors duration-300 ease-in-out">
                     <a className="relative inline-block transition-all duration-300 after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="projects.html">Projects</a>
                   </li>
                   
-                  <li className="text-gray-600 hover:text-gray-900 active:text-gray-800 cursor-pointer transition-colors duration-300 ease-in-out">
+                  <li className="text-xl text-gray-600 hover:text-gray-900 active:text-gray-800 cursor-pointer transition-colors duration-300 ease-in-out">
                     <a className="relative inline-block transition-all duration-300 after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="ad.html">Advertisement </a>
                   </li>
 
                 </ul>
 
-                <a className="hidden cursor-pointer text-center md:block py-2 px-4 text-white bg-black rounded-lg text-[16px] transition-all duration-300 hover:bg-gray-800" href="HireMe.html">Hire Me</a>
+                <a className="text-xl hidden cursor-pointer text-center md:block py-2 px-4 text-white bg-black rounded-lg  transition-all duration-300 hover:bg-gray-800" href="HireMe.html">Hire Me</a>
 
-                <button className="text-2xl block md:hidden cursor-pointer transition-transform duration-300" onClick={handleClick}>
+                <button className="text-3xl block md:hidden cursor-pointer transition-transform duration-300" onClick={handleClick}>
                   {flag ? (
                     <div className="transition-transform duration-300 rotate-90 text-black">X</div>
                   ) : (
@@ -84,68 +85,114 @@
               </div>
             </nav>
 
-            <section className={`md:hidden fixed top-12 left-0 w-full bg-white shadow-md z-50 transition-all duration-500 ease-in-out transform ${
+            <section className={`md:hidden fixed top-17 left-0 w-full bg-white shadow-md z-50 transition-all duration-500 ease-in-out transform ${
               flag ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
             }`}>
               <div className="p-4 space-y-2">
 
-                <a className="block font-normal py-2 text-gray-900 hover:text-gray-600 text-center active:text-gray-800 transition-all duration-300 relative after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="https://imadityagolu-portfolio.vercel.app/">Portfolio</a>
+                <a className="text-xl block font-normal py-2 text-gray-900 hover:text-gray-600 text-center active:text-gray-800 transition-all duration-300 relative after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="https://imadityagolu-portfolio.vercel.app/">Portfolio</a>
 
-                <a className="block font-normal py-2 text-gray-900 hover:text-gray-600 text-center active:text-gray-800 transition-all duration-300 relative after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="links.html">Links</a>
+                <a className="text-xl block font-normal py-2 text-gray-900 hover:text-gray-600 text-center active:text-gray-800 transition-all duration-300 relative after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="links.html">Links</a>
 
-                <a className="block font-normal py-2 text-gray-900 hover:text-gray-600 text-center active:text-gray-800 transition-all duration-300 relative after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="projects.html">Projects</a>
+                <a className="text-xl block font-normal py-2 text-gray-900 hover:text-gray-600 text-center active:text-gray-800 transition-all duration-300 relative after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="projects.html">Projects</a>
 
-                <a className="block font-normal py-2 text-gray-900 hover:text-gray-600 text-center active:text-gray-800 transition-all duration-300 relative after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="ad.html">Advertisement </a>
+                <a className="text-xl block font-normal py-2 text-gray-900 hover:text-gray-600 text-center active:text-gray-800 transition-all duration-300 relative after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2" href="ad.html">Advertisement </a>
 
-                <a className="block cursor-pointer py-2 mt-4 text-center text-white bg-black rounded-lg text-[14px] hover:bg-gray-800 transition-all duration-300" href="HireMe.html">Hire Me</a>
+                <a className="text-xl block cursor-pointer py-2 mt-4 text-center text-white bg-black rounded-lg  hover:bg-gray-800 transition-all duration-300" href="HireMe.html">Hire Me</a>
 
               </div>
             </section>
 
             <hr></hr>
 
+            {/* description */}
+            <div className="bg-gray-100">
+            <div className="mx-auto px-[8%] pb-3 p-7">
+            <h2 className="text-lg font-semibold mb-5">With a passion for <b class="text-red-600">Painting</b> and creative <b class="text-red-600">Writing</b>, I try to brings stories and emotions to life through art. As a <b class="text-red-600">Computer Engineer</b>, my blend of creativity and technical expertise enables me to tackle challenges with both artistic vision and engineering precision.</h2>
+            </div>
+            </div>
+
+            {/* painting */}
+            <div class="bg-gray-100 flex items-center justify-center w-full">
+
+            <div class="bg-gray-100 flex items-center justify-center p-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl items-center">
+
+              <div class="grid grid-cols-2 gap-4 relative">
+
+                <img src="images/a1.png" alt="Collage 1" class="rounded-lg shadow-md transform -rotate-8 -translate-x-1 -translate-y-2" />
+
+                <img src="images/a2.png" alt="Collage 2" class="rounded-lg shadow-md transform rotate-2 translate-x-1 -translate-y-4" />
+
+                <img src="images/a3.png" alt="Collage 3" class="rounded-lg shadow-md transform -rotate-3 translate-x-1 translate-y-2" />
+
+                <img src="images/a4.png" alt="Collage 4" class="rounded-lg shadow-md transform rotate-6 translate-x-3 translate-y-1" />
+
+              </div>
+
+              <div>
+                <h2 class="text-3xl font-bold mb-4">Some of my <spam class="text-red-500">art</spam> works</h2>
+                <p class="text-gray-700 mb-4">
+                  As a passionate painter i try to blending emotion and color, capturing fleeting moments on canvas with bold strokes, vivid hues, and expressive depth.
+                </p>
+                <a href="allpaintings.html" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+                  See All My Paintings ↗️
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+            {/* about me */}
             <div className="bg-gray-100 mb-5">
-            <main className="container mx-auto px-6 pb-15">
+            <main className="container mx-auto px-[8%] pb-15">
               
               <br></br>
 
-              <h2 className="text-sm font-semibold mb-4">With a passion for <b>painting</b> and creative <b>writing</b>, I try to brings stories and emotions to life through art. As a <b>computer engineer</b>, my blend of creativity and technical expertise enables me to tackle challenges with both artistic vision and engineering precision.</h2>
-
-              <br></br>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6">
 
                     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
-                            <img src="images/my-bg-1.jpg" alt="image" className="w-full h-48 object-cover" />
+                            <img src="images/my-bg-1.jpg" alt="image" className="w-full h-70 object-cover" />
                             <div className="p-4">
-                                <h3 className="text-xl font-semibold mb-2">Sociopathic</h3>
-                                <p className="text-gray-700 mb-2">not liking to be with other people</p>
-                                <p className="text-sm text-gray-600 mb-1"><strong>Targets:</strong> details</p>
+
+                                <h3 className="text-2xl font-semibold mb-2">Sociopathic</h3>
+
+                                <p className="text-xl text-gray-700 mb-2">don't like to be with other people</p>
+
+                                <p className="text-lg text-gray-600 mb-1"><strong>Targets:</strong> details</p>
                             </div>
                     </div>
                         
                     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
-                            <img src="images/my-bg-2.jpg" alt="image" className="w-full h-48 object-cover" />
+                            <img src="images/my-bg-2.jpg" alt="image" className="w-full h-70 object-cover" />
                             <div className="p-4">
-                                <h3 className="text-xl font-semibold mb-2">Cosmopolitan</h3>
-                                <p className="text-gray-700 mb-2">influenced by the culture of nature</p>
-                                <p className="text-sm text-gray-600 mb-1"><strong>Targets:</strong> details</p>
+
+                                <h3 className="text-2xl font-semibold mb-2">Cosmopolitan</h3>
+
+                                <p className="text-xl text-gray-700 mb-2">influenced by the culture of nature</p>
+
+                                <p className="text-lg text-gray-600 mb-1"><strong>Targets:</strong> details</p>
                             </div>
                     </div>
                         
                     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
-                            <img src="images/my-bg-3.jpg" alt="image" className="w-full h-48 object-cover" />
+                            <img src="images/my-bg-3.jpg" alt="image" className="w-full h-70 object-cover" />
                             <div className="p-4">
-                                <h3 className="text-xl font-semibold mb-2">Wanderlust</h3>
-                                <p className="text-gray-700 mb-2">strong desire to travel around world</p>
-                                <p className="text-sm text-gray-600 mb-1"><strong>Targets:</strong> details</p>
+
+                                <h3 className="text-2xl font-semibold mb-2">Wanderlust</h3>
+
+                                <p className="text-xl text-gray-700 mb-2">strong desire to travel around world</p>
+
+                                <p className="text-lg text-gray-600 mb-1"><strong>Targets:</strong> details</p>
+
                             </div>
                     </div>
                 </div>
             </main>
-
             </div>
 
+            {/* contact me */}
             <div id="Contact" className="w-full text-center text-black">
 
               <div className="relative">
@@ -163,7 +210,7 @@
                 </a>
               </div>
 
-<br></br>
+              <br></br>
 
               <div>
                 <p className="text-center place-content-center relative top-5 text-xl">connect with me on social media...</p>
@@ -191,12 +238,13 @@
 
               </div>
 
-              <div className="flex text-center place-content-center relative top-20 text-sm">    
+              <div className="flex text-center place-content-center relative top-30 text-sm h-20">    
                 Made by @imadityagolu © 2025
 <br></br>
 <br></br>
               </div>
             </div>
+          
           </div>
         );
       };
