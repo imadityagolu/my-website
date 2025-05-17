@@ -23,6 +23,19 @@
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
   </head>
+  <style>
+        .footer-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        .social-icon:hover {
+            transform: translateY(-2px);
+            transition: transform 0.3s ease;
+        }
+        .link-hover:hover {
+            color: #93c5fd;
+            transition: color 0.3s ease;
+        }
+    </style>
   <body class="">
     
     <!-- React Component -->
@@ -193,58 +206,78 @@
             </div>
 
             {/* contact me */}
-            <div id="Contact" className="w-full text-center text-black">
+                <footer class="footer-gradient text-white py-12 ">
+                  
+                  <div class="container mx-auto px-6 md:px-12">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                    <div>
+                      <h3 class="text-2xl font-bold mb-4">Quick Links</h3>
+                        <ul class="space-y-2">
+                          <li><a href="https://imadityagolu-portfolio.vercel.app/" class="link-hover">Portfolio</a></li>
+                          <li><a href="links.html" class="link-hover">Links</a></li>
+                          <li><a href="projects.html" class="link-hover">Projects</a></li>
+                          <li><a href="ad.html" class="link-hover">Advertisement</a></li>
+                        </ul>
+                    </div>
+                
+                    <div>
+                      <h3 class="text-2xl font-bold mb-4">Contact Info</h3>
+                        <ul class="space-y-2 text-gray-200">
 
-              <div className="relative">
+                        <li><a href="mailto:adityasng420.ak@gmail.com"><i class="fas fa-envelope mr-2"></i> adityasng420.ak@gmail.com</a>
+                        </li>
 
-                <p className="text-3xl p-6 font-bold text-red-600">Contact me !</p>
+                        <li><a href="https://api.whatsapp.com/send?phone=918083079692"><i class="fas fa-phone mr-2"></i> +91 80830 79692</a>
+                        </li>
 
-                <a href="mailto:adityasng420.ak@gmail.com" className="flex place-content-center p-2">
-                <i className="fa fa-envelope text-3xl mr-2"></i> 
-                <p className="text-blue-700">adityasng420.ak@gmail.com</p>
-                </a>
-    
-                <a href="https://api.whatsapp.com/send?phone=918083079692" className="flex place-content-center p-2">
-                <i className="fa fa-phone text-3xl" /> 
-                <p className="text-blue-700">+91 80830-79692</p>
-                </a>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Patna, Bihar, India
+                        </li>
+                        
+                        </ul>
+                    </div>
+                
+                    <div>
+                      <h3 class="text-2xl font-bold mb-4">Stay Connected</h3>
+                    
+                      <div class="flex space-x-4 mt-4">
+                        <a href="https://x.com/imAdityaGolu" target="_blank" class="social-icon">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/imadityagolu/" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="https://github.com/imadityagolu" target="_blank" class="social-icon">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/imadityagolu/" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                        <a href="https://www.facebook.com/imadityagolu/" target="_blank" class="social-icon">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                        <a href="https://vercel.com/aditya-kumars-projects-a1b7703f" target="_blank" class="social-icon">
+                            <i class="fas fa-play fa-rotate-270 text-2xl"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@imAdityaGolu" target="_blank" class="social-icon">
+                            <i class="fab fa-youtube text-2xl"></i>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=918083079692" target="_blank" class="social-icon">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                        </a>
+                        <a href="https://web.telegram.org/k/#@ImAdityaGolu" target="_blank" class="social-icon">
+                            <i class="fab fa-telegram text-2xl"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="border-t border-gray-300 mt-6 pt-6 text-center text-gray-200">
+                    <p>&copy; 2025. All rights reserved.</p>
+                  </div>
               </div>
+            </footer>
 
-              <br></br>
-
-              <div>
-                <p className="text-center place-content-center relative top-5 text-xl">connect with me on social media...</p>
-              </div>
-
-              <div className="flex place-content-center text-3xl gap-5 relative top-10">
-
-                <a href="https://www.instagram.com/imadityagolu/"><i className="fab fa-instagram text-pink-700"></i></a> 
-
-                <a href="https://www.facebook.com/imadityagolu/"><i className="fab fa-facebook text-blue-500"></i></a> 
-
-                <a href="https://github.com/imadityagolu"><i className="fab fa-github"></i></a> 
-
-                <a href="https://www.linkedin.com/in/imadityagolu/"><i className="fab fa-linkedin text-blue-700"></i></a> 
-
-                <a href="https://vercel.com/aditya-kumars-projects-a1b7703f"><i class="fas fa-play fa-rotate-270"></i></a> 
-
-                <a href="https://x.com/imAdityaGolu"><i className="fab fa-twitter text-blue-500"></i></a>
-
-                <a href="https://www.youtube.com/@imAdityaGolu"><i className="fab fa-youtube text-red-600"></i></a> 
-
-                <a href="https://api.whatsapp.com/send?phone=918083079692"><i className="fab fa-whatsapp text-green-500"></i></a>
-
-                <a href="https://web.telegram.org/k/#@ImAdityaGolu"><i className="fab fa-telegram text-blue-800"></i></a>
-
-              </div>
-
-              <div className="flex text-center place-content-center relative top-30 text-sm h-20">    
-                Made by @imadityagolu © 2025
-<br></br>
-<br></br>
-              </div>
-            </div>
-          
           </div>
         );
       };
